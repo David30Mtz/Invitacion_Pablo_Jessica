@@ -1,0 +1,325 @@
+.rsvp {
+  padding: clamp(90px, 12vw, 140px) 24px 110px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(121, 201, 255, 0.12),
+      transparent 24%
+    ),
+    linear-gradient(
+      180deg,
+      #f7fbff 0%,
+      #ffffff 100%
+    );
+}
+
+.rsvp__content {
+  width: min(860px, 100%);
+  margin: 0 auto;
+
+  padding: 48px 32px;
+
+  border: 1px solid rgba(121, 201, 255, 0.16);
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  box-shadow:
+    0 22px 50px rgba(22, 83, 130, 0.08);
+
+  text-align: center;
+}
+
+.rsvp__icon {
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  color: #1f6eae;
+
+  background: #eef8ff;
+}
+
+.rsvp__eyebrow {
+  margin-bottom: 14px;
+
+  color: #5bb4ec;
+
+  font-size: 0.7rem;
+  letter-spacing: 0.22rem;
+  text-transform: uppercase;
+}
+
+.rsvp h2 {
+  color: #1d4a75;
+
+  font-family: var(--font-title);
+
+  font-size: clamp(3rem, 7vw, 5rem);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+.rsvp__question {
+  margin-top: 24px;
+
+  color: #5f7385;
+
+  font-family: var(--font-title);
+
+  font-size: clamp(1.18rem, 3vw, 1.55rem);
+
+  line-height: 1.5;
+}
+
+.rsvp__form {
+  width: min(580px, 100%);
+
+  margin: 34px auto 0;
+
+  text-align: left;
+}
+
+.rsvp__label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #45657f;
+
+  font-size: 0.78rem;
+
+  letter-spacing: 0.08rem;
+
+  text-transform: uppercase;
+}
+
+.rsvp__input {
+  width: 100%;
+
+  padding: 16px 18px;
+
+  border: 1px solid rgba(91, 180, 236, 0.25);
+
+  border-radius: 16px;
+
+  outline: none;
+
+  color: #315374;
+
+  background: #ffffff;
+
+  font-family: var(--font-body);
+
+  font-size: 0.95rem;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.rsvp__input::placeholder {
+  color: #9aabb8;
+}
+
+.rsvp__input:focus {
+  border-color: #63b9ef;
+
+  box-shadow:
+    0 0 0 4px rgba(99, 185, 239, 0.1);
+}
+
+.rsvp__options {
+  display: grid;
+
+  gap: 14px;
+
+  margin-top: 24px;
+}
+
+.rsvp__option {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px 18px;
+
+  border: 1px solid rgba(121, 201, 255, 0.18);
+
+  border-radius: 18px;
+
+  color: #315374;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f5fbff
+    );
+
+  cursor: pointer;
+
+  text-align: left;
+
+  font-family: var(--font-body);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.rsvp__option:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(91, 180, 236, 0.5);
+
+  box-shadow:
+    0 10px 28px rgba(22, 83, 130, 0.08);
+}
+
+.rsvp__option--selected {
+  border-color: #63b9ef;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f4fbff,
+      #e8f7ff
+    );
+
+  box-shadow:
+    0 10px 30px rgba(55, 139, 201, 0.12);
+}
+
+.rsvp__radio {
+  width: 22px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 2px solid #8cccf3;
+
+  border-radius: 50%;
+}
+
+.rsvp__radio-dot {
+  width: 10px;
+  height: 10px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: #3a9bdd;
+}
+
+.rsvp__error {
+  margin-top: 16px;
+
+  color: #b84b4b;
+
+  font-size: 0.82rem;
+
+  text-align: center;
+}
+
+.rsvp__button {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 26px;
+
+  padding: 16px 24px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      145deg,
+      #75cfff,
+      #2d80c8
+    );
+
+  font-family: var(--font-body);
+
+  font-size: 0.92rem;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 16px 36px rgba(45, 128, 200, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.rsvp__button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 20px 40px rgba(45, 128, 200, 0.28);
+}
+
+.rsvp__button:active {
+  transform: scale(0.98);
+}
+
+.rsvp__note {
+  margin-top: 18px;
+
+  color: #98a8b5;
+
+  font-size: 0.72rem;
+}
+
+@media (max-width: 600px) {
+  .rsvp {
+    padding:
+      80px
+      18px
+      90px;
+  }
+
+  .rsvp__content {
+    padding:
+      38px
+      20px;
+  }
+
+  .rsvp__option {
+    padding:
+      16px
+      14px;
+  }
+}

@@ -1,0 +1,444 @@
+.intro {
+  position: relative;
+
+  min-height: 100svh;
+
+  display: grid;
+  place-items: center;
+
+  padding: 24px;
+
+  overflow: hidden;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      rgba(8, 18, 31, 0.22),
+      rgba(8, 18, 31, 0.54)
+    ),
+    linear-gradient(
+      180deg,
+      #a9e2ff 0%,
+      #62b8e6 30%,
+      #2e82b8 52%,
+      #154d75 72%,
+      #091728 100%
+    );
+}
+
+/* REFLEJOS DE LUZ SOBRE EL MAR */
+.intro__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      105deg,
+      transparent 10%,
+      rgba(255, 255, 255, 0.04) 28%,
+      rgba(255, 255, 255, 0.16) 44%,
+      rgba(255, 255, 255, 0.06) 58%,
+      transparent 78%
+    ),
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(255, 255, 255, 0.35),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(234, 220, 200, 0.14),
+      transparent 32%
+    );
+
+  animation:
+    introLight 9s ease-in-out infinite alternate;
+
+  pointer-events: none;
+}
+
+/* OLAS */
+.intro__wave {
+  position: absolute;
+
+  left: -12%;
+
+  width: 124%;
+
+  border-radius:
+    48% 52% 0 0 /
+    100% 100% 0 0;
+
+  pointer-events: none;
+
+  will-change: transform;
+}
+
+/* OLA TRASERA */
+.intro__wave--one {
+  bottom: -105px;
+
+  height: 220px;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(216, 245, 255, 0.38),
+      rgba(109, 197, 236, 0.24) 45%,
+      rgba(59, 149, 201, 0.24)
+    );
+
+  box-shadow:
+    0 -10px 35px rgba(255, 255, 255, 0.06);
+
+  animation:
+    introWaveOne 7s ease-in-out infinite alternate;
+}
+
+/* OLA DELANTERA */
+.intro__wave--two {
+  bottom: -165px;
+
+  height: 285px;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(138, 214, 247, 0.24),
+      rgba(55, 151, 208, 0.32) 40%,
+      rgba(24, 91, 145, 0.46)
+    );
+
+  box-shadow:
+    0 -14px 40px rgba(255, 255, 255, 0.04);
+
+  animation:
+    introWaveTwo 5.5s ease-in-out infinite alternate;
+}
+
+/* CONTENIDO PRINCIPAL */
+.intro__content {
+  position: relative;
+
+  z-index: 4;
+
+  width: min(680px, 100%);
+
+  text-align: center;
+}
+
+/* ÍCONO */
+.intro__icon {
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* TEXTO SUPERIOR */
+.intro__eyebrow {
+  margin-bottom: 18px;
+
+  color:
+    rgba(255, 255, 255, 0.84);
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.18rem;
+
+  line-height: 1.6;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* NOMBRES */
+.intro__title {
+  display: flex;
+
+  flex-direction: column;
+
+  font-family: var(--font-title);
+
+  font-size:
+    clamp(4.2rem, 12vw, 8rem);
+
+  font-weight: 400;
+
+  line-height: 0.76;
+
+  text-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.28);
+}
+
+.intro__title span {
+  margin:
+    20px 0 12px;
+
+  color: #f8fbff;
+
+  font-size: 2rem;
+
+  font-style: italic;
+
+  text-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* NOMBRES COMPLETOS */
+.intro__subtitle {
+  margin-top: 20px;
+
+  color:
+    rgba(255, 255, 255, 0.88);
+
+  font-size: 0.85rem;
+
+  letter-spacing: 0.05rem;
+
+  text-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.16);
+}
+
+/* LÍNEA */
+.intro__line {
+  width: 90px;
+
+  height: 1px;
+
+  margin:
+    34px auto 20px;
+
+  background:
+    rgba(255, 255, 255, 0.72);
+
+  box-shadow:
+    0 0 16px rgba(255, 255, 255, 0.2);
+}
+
+/* FECHA */
+.intro__date {
+  margin-bottom: 34px;
+
+  font-size: 0.78rem;
+
+  letter-spacing: 0.28rem;
+
+  text-shadow:
+    0 3px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* BOTÓN */
+.intro__button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding:
+    15px 26px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.45);
+
+  border-radius: 999px;
+
+  color: #13405f;
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  backdrop-filter: blur(14px);
+
+  cursor: pointer;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.intro__button:hover {
+  transform:
+    translateY(-3px);
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 22px 48px rgba(0, 0, 0, 0.2),
+    0 0 25px rgba(155, 220, 255, 0.18);
+}
+
+.intro__button:active {
+  transform:
+    translateY(0)
+    scale(0.97);
+}
+
+/* TEXTO INFERIOR */
+.intro__hint {
+  margin-top: 16px;
+
+  color:
+    rgba(255, 255, 255, 0.74);
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.06rem;
+
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+/* MOVIMIENTO OLA TRASERA */
+@keyframes introWaveOne {
+  0% {
+    transform:
+      translateX(-30px)
+      translateY(4px)
+      rotate(-1deg)
+      scaleX(1.02);
+  }
+
+  50% {
+    transform:
+      translateX(5px)
+      translateY(-5px)
+      rotate(0deg)
+      scaleX(1.05);
+  }
+
+  100% {
+    transform:
+      translateX(30px)
+      translateY(-10px)
+      rotate(1deg)
+      scaleX(1.08);
+  }
+}
+
+/* MOVIMIENTO OLA DELANTERA */
+@keyframes introWaveTwo {
+  0% {
+    transform:
+      translateX(22px)
+      translateY(0)
+      rotate(0.7deg)
+      scaleX(1.02);
+  }
+
+  50% {
+    transform:
+      translateX(0)
+      translateY(-5px)
+      rotate(0deg)
+      scaleX(1.05);
+  }
+
+  100% {
+    transform:
+      translateX(-22px)
+      translateY(-9px)
+      rotate(-0.7deg)
+      scaleX(1.07);
+  }
+}
+
+/* MOVIMIENTO DEL REFLEJO */
+@keyframes introLight {
+  0% {
+    transform:
+      translateX(-4%);
+
+    opacity: 0.65;
+  }
+
+  50% {
+    opacity: 0.88;
+  }
+
+  100% {
+    transform:
+      translateX(4%);
+
+    opacity: 1;
+  }
+}
+
+/* MÓVIL */
+@media (max-width: 600px) {
+  .intro {
+    padding:
+      24px 18px;
+  }
+
+  .intro__title {
+    line-height: 0.8;
+  }
+
+  .intro__date {
+    letter-spacing:
+      0.18rem;
+  }
+
+  .intro__subtitle {
+    font-size:
+      0.75rem;
+  }
+
+  .intro__wave--one {
+    bottom: -100px;
+
+    height: 185px;
+  }
+
+  .intro__wave--two {
+    bottom: -145px;
+
+    height: 230px;
+  }
+}
+
+/* RESPETA USUARIOS QUE PREFIEREN MENOS ANIMACIÓN */
+@media (prefers-reduced-motion: reduce) {
+  .intro__overlay,
+  .intro__wave--one,
+  .intro__wave--two {
+    animation: none;
+  }
+}

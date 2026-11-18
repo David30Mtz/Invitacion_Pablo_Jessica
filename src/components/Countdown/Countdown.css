@@ -1,0 +1,163 @@
+.countdown {
+  position: relative;
+  padding: clamp(90px, 12vw, 145px) 24px;
+  overflow: hidden;
+  color: var(--color-text-dark);
+  background:
+    radial-gradient(circle at 15% 15%, rgba(121, 201, 255, 0.14), transparent 28%),
+    radial-gradient(circle at 85% 80%, rgba(234, 220, 200, 0.32), transparent 30%),
+    linear-gradient(145deg, #f7fbff, #fffdfa);
+}
+
+.countdown__heading {
+  position: relative;
+  z-index: 2;
+  width: min(760px, 100%);
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.countdown__eyebrow {
+  margin-bottom: 16px;
+  color: #5baee8;
+  font-size: 0.7rem;
+  letter-spacing: 0.24rem;
+  text-transform: uppercase;
+}
+
+.countdown h2 {
+  color: #1e4c77;
+  font-family: var(--font-title);
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.countdown__line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 26px 0 22px;
+  color: #79c9ff;
+}
+
+.countdown__line span {
+  width: 68px;
+  height: 1px;
+  background: rgba(121, 201, 255, 0.5);
+}
+
+.countdown__message {
+  color: #5b6f81;
+  font-family: var(--font-title);
+  font-size: clamp(1.15rem, 3vw, 1.55rem);
+  line-height: 1.55;
+}
+
+.countdown__grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+.countdown__item {
+  text-align: center;
+}
+
+.countdown__number-wrapper {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(121, 201, 255, 0.18);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 42px rgba(26, 88, 135, 0.1);
+}
+
+.countdown__shine {
+  position: absolute;
+  inset: -20% auto -20% -40%;
+  width: 30%;
+  transform: translateX(-250%) rotate(25deg);
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+  animation: countdownShine 8s infinite;
+}
+
+.countdown__number {
+  position: relative;
+  z-index: 1;
+  color: #1f6eae;
+  font-family: var(--font-title);
+  font-size: clamp(2.6rem, 7vw, 4.2rem);
+  line-height: 1;
+}
+
+.countdown__label {
+  display: inline-block;
+  margin-top: 16px;
+  color: #6f8294;
+  font-size: 0.72rem;
+  letter-spacing: 0.16rem;
+  text-transform: uppercase;
+}
+
+.countdown__date {
+  position: relative;
+  z-index: 2;
+  margin-top: 44px;
+  text-align: center;
+  color: #4f6478;
+  font-size: 0.82rem;
+  letter-spacing: 0.18rem;
+  text-transform: uppercase;
+}
+
+.countdown__decoration {
+  position: absolute;
+  border: 1px solid rgba(121, 201, 255, 0.14);
+  border-radius: 50%;
+}
+
+.countdown__decoration--one {
+  top: -200px;
+  right: -180px;
+  width: 480px;
+  height: 480px;
+}
+
+.countdown__decoration--two {
+  bottom: -230px;
+  left: -210px;
+  width: 520px;
+  height: 520px;
+}
+
+@keyframes countdownShine {
+  0%,
+  70% {
+    transform: translateX(-250%) rotate(25deg);
+  }
+
+  100% {
+    transform: translateX(450%) rotate(25deg);
+  }
+}
+
+@media (max-width: 650px) {
+  .countdown {
+    min-height: auto;
+    padding: 90px 18px;
+  }
+
+  .countdown__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 14px;
+  }
+}

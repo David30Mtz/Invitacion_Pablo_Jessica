@@ -1,0 +1,17 @@
+:root {
+  --color-dark: #0c1625;
+  --color-deep: #13385a;
+  --color-light: #f7fbff;
+  --color-white: #ffffff;
+  --color-sky: #79c9ff;
+  --color-sky-soft: #dff2ff;
+  --color-ocean: #1f6eae;
+  --color-sand: #eadcc8;
+  --color-sand-soft: #f6efe6;
+  --color-text-dark: #18314d;
+  --color-text-soft: rgba(255, 255, 255, 0.8);
+  --color-line: rgba(121, 201, 255, 0.45);
+
+  --font-title: "Cormorant Garamond", serif;
+  --font-body: "Montserrat", sans-serif;
+}

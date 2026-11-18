@@ -1,0 +1,117 @@
+.stay-info {
+  position: relative;
+  padding: clamp(85px, 11vw, 130px) 24px;
+  background:
+    linear-gradient(180deg, #fefdf9 0%, #f4fbff 100%);
+}
+
+.stay-info__header {
+  width: min(760px, 100%);
+  margin: 0 auto 46px;
+  text-align: center;
+}
+
+.stay-info__eyebrow {
+  margin-bottom: 15px;
+  color: #5bb4ec;
+  font-size: 0.7rem;
+  letter-spacing: 0.22rem;
+  text-transform: uppercase;
+}
+
+.stay-info h2 {
+  color: #1d4a75;
+  font-family: var(--font-title);
+  font-size: clamp(3rem, 8vw, 5.4rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.stay-info__description {
+  margin-top: 18px;
+  color: #64798d;
+  font-family: var(--font-title);
+  font-size: clamp(1.08rem, 2.8vw, 1.4rem);
+  line-height: 1.6;
+}
+
+.stay-info__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.stay-info__card {
+  padding: 28px 24px;
+  border: 1px solid rgba(121, 201, 255, 0.16);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 42px rgba(22, 83, 130, 0.08);
+}
+
+.stay-info__icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  color: #1f6eae;
+  background: #eef8ff;
+}
+
+.stay-info__card h3 {
+  color: #184165;
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 400;
+}
+
+.stay-info__card p {
+  margin-top: 10px;
+  color: #5f7284;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.stay-info__button {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin: 32px auto 0;
+
+  padding: 13px 22px;
+
+  border-radius: 999px;
+
+  color: #ffffff;
+  background: linear-gradient(145deg, #75cfff, #2d80c8);
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.stay-info__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(45, 128, 200, 0.22);
+}
+
+.stay-info__button:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 820px) {
+  .stay-info__grid {
+    grid-template-columns: 1fr;
+  }
+}
